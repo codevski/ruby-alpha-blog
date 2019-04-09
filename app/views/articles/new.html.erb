@@ -1,0 +1,24 @@
+<div class='text-center'>
+  <div>
+    <h1>Create Article</h1>
+  </div>
+  <div><%= link_to 'Home', root_path %> | <%= link_to 'About', about_path %></div>
+  <div>
+    <p>Simple blog system written in Ruby on Rails 5.2</p>
+    <%= form_for @article do |f| %>
+      <p>
+        <%= f.label :title %> </br>
+        <%= f.text_field :title %>
+      </p>
+      <p>
+        <%= f.label :description %> </br>
+        <%= f.text_area :description %>
+      </p>
+      <p>
+        <%= f.submit %>
+      </p>
+
+    <% end %>
+  </div>
+  <footer style='font-size: 0.5em'>© 2019 Alpha Blog, Inc.</footer>
+</div>

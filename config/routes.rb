@@ -3,4 +3,8 @@ Rails.application.routes.draw do
 
   root 'pages#home'
   get 'about', to: 'pages#about'
+
+  # gives us a article CRUD support with resources tag
+  resources :articles
+
 end
