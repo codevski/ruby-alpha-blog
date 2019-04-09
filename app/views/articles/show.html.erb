@@ -1,0 +1,16 @@
+<div class='text-center'>
+  <div>
+    <h1>Article</h1>
+  </div>
+  <div><%= link_to 'Home', root_path %> | <%= link_to 'About', about_path %></div>
+  <div>
+   <h2><%= @article.title %></h2>
+    <p>
+      Title: <%= @article.title %>
+    </p>
+    <p>
+      Description: <%= @article.description %>
+    </p>
+  </div>
+  <footer style='font-size: 0.5em'>© 2019 Alpha Blog, Inc.</footer>
+</div>

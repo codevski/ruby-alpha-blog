@@ -4,7 +4,14 @@
   </div>
   <div><%= link_to 'Home', root_path %> | <%= link_to 'About', about_path %></div>
   <div>
-    <p>Simple blog system written in Ruby on Rails 5.2</p>
+    <% if @article.errors.any? %>
+      <h4>The following errors prevented the article frm getting created</h4>
+      <p>
+        <% @article.errors.full_messages.each do |msg| %>
+          <span> <%= msg %> </span></br>
+        <% end %>
+      </p>
+    <% end %>
     <%= form_for @article do |f| %>
       <p>
         <%= f.label :title %> </br>
