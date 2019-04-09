@@ -1,7 +1,7 @@
 <h1 align="center">Alpha Blog</h1>
 
 <div align="center">
-  <strong>We. Love. Ruby</strong>
+  <strong>We. Love. Ruby.</strong>
 </div>
 <div align="center">
   A Ruby <code>Blog</code> Project 
