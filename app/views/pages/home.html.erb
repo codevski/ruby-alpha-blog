@@ -2,7 +2,7 @@
   <div>
     <h1>Home</h1>
   </div>
-  <div><%= link_to 'Home', root_path %> | <%= link_to 'Articles', articles_path %> | <%= link_to 'About', about_path %></div>
+  <%= render 'layouts/nav' %>
   <div><%= image_tag 'beard.png' %> </div>
   <footer style='font-size: 0.5em'>© 2019 Alpha Blog, Inc.</footer>
 </div>
