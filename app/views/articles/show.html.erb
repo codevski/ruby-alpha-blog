@@ -2,7 +2,7 @@
   <div>
     <h1>Article</h1>
   </div>
-  <div><%= link_to 'Home', root_path %> | <%= link_to 'About', about_path %></div>
+  <div><%= link_to 'Home', root_path %> | <%= link_to 'Articles', articles_path %> | <%= link_to 'About', about_path %></div>
   <div>
    <h2><%= @article.title %></h2>
     <p>
@@ -11,6 +11,8 @@
     <p>
       Description: <%= @article.description %>
     </p>
+    <%= link_to "Back", articles_path %>
+    <%= link_to "Edit", edit_article_path %>
   </div>
   <footer style='font-size: 0.5em'>© 2019 Alpha Blog, Inc.</footer>
 </div>
