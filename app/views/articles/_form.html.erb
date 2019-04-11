@@ -1,11 +1,4 @@
-<% if @article.errors.any? %>
-  <h4>The following errors prevented the article from getting created</h4>
-  <p>
-    <% @article.errors.full_messages.each do |msg| %>
-      <span> <%= msg %> </span></br>
-    <% end %>
-  </p>
-<% end %>
+<%= render 'shared/errors', obj: @article %>
 
 <div class="form">
     <%= form_for @article do |f| %>
