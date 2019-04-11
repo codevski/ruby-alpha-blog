@@ -1,16 +1,25 @@
-<div class='text-center'>
-  <div>
-    <h1>Article</h1>
-  </div>
-  <div>
-   <h2><%= @article.title %></h2>
-    <p>
-      Title: <%= @article.title %>
-    </p>
-    <p>
-      Description: <%= @article.description %>
-    </p>
-    <%= link_to "Back", articles_path %>
-    <%= link_to "Edit", edit_article_path %>
+
+<div class='col-sm-8 offset-sm-2'>
+  <div class="card text-center">
+    <div class="card-header">
+      <%= @article.title%>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Description</h5>
+      <p class="card-text">
+        <%# if you use tabs inside description it will display it %>
+        <%= simple_format(@article.description) %>
+      </p>
+      <hr>
+      <%= link_to "Edit", edit_article_path, class: 'btn btn-primary btn-sm' %>
+      <%= link_to "Delete", article_path(@article), method: :delete, 
+                                                    data: { confirm: "Arou you sure you want to delete the article?"},
+                                                    class: "btn btn-danger btn-sm"%>
+      <%= link_to "Back", articles_path, class: 'btn btn-success btn-sm' %>
+    </div>
+    <div class="card-footer text-muted">
+      Updated: <%= @article.updated_at.strftime("%d-%m-%Y")%>
+    </div>
   </div>
 </div>
+
