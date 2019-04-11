@@ -2,7 +2,6 @@
   <div>
     <h1>Article</h1>
   </div>
-  <%= render 'layouts/nav' %>
   <div>
    <h2><%= @article.title %></h2>
     <p>
@@ -14,5 +13,4 @@
     <%= link_to "Back", articles_path %>
     <%= link_to "Edit", edit_article_path %>
   </div>
-  <footer style='font-size: 0.5em'>© 2019 Alpha Blog, Inc.</footer>
 </div>
