@@ -1,7 +1,7 @@
 @import "bootstrap";
 
 .row {
-  margin-top: 20px;
+  // margin-top: 20px;
 }
 
 #logo {
@@ -58,4 +58,13 @@ footer ul li {
 .dropdown a:focus {
   outline: none !important;
   box-shadow: none;
+}
+
+.content-middle-div {
+  margin-top: auto;
+  margin-bottom: auto;
+}
+
+.line-height-9 {
+  line-height: 0.9em;
 }

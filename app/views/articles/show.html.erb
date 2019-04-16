@@ -11,14 +11,33 @@
         <%= simple_format(@article.description) %>
       </p>
       <hr>
-      <%= link_to "Edit", edit_article_path, class: 'btn btn-primary btn-sm' %>
-      <%= link_to "Delete", article_path(@article), method: :delete, 
-                                                    data: { confirm: "Arou you sure you want to delete the article?"},
-                                                    class: "btn btn-danger btn-sm"%>
-      <%= link_to "Back", articles_path, class: 'btn btn-success btn-sm' %>
-    </div>
-    <div class="card-footer text-muted">
-      Updated: <%= @article.updated_at.strftime("%d-%m-%Y")%>
+      <div class='row '>
+        <div class='text-left col-md-8 content-middle-div'>
+          <%# <div> %>
+            <%= link_to "Edit", edit_article_path, class: 'btn btn-primary btn-sm' %>
+            <%= link_to "Delete", article_path(@article), method: :delete, 
+                                                          data: { confirm: "Arou you sure you want to delete the article?"},
+                                                          class: "btn btn-danger btn-sm"%>
+            <%= link_to "Back", articles_path, class: 'btn btn-success btn-sm' %>
+          <%# </div> %>
+        </div>
+        <div class='text-right col-md-4'>
+        <div class=text-left>
+          <small>Updated: <%= @article.updated_at.strftime("%d-%m-%Y") %></small>
+          <div class='row '>
+            <div class='col-md-3'>
+              <%= link_to gravatar_for(@article.user, size: 45), user_path(@article.user) %>
+            </div>
+            <div class='col-md-9 content-middle-div'>
+              <%= link_to @article.user.username, user_path(@article.user) %>
+              <div class='line-height-9'>
+                <span><small>joined: <%= @article.user.created_at.strftime("%d-%m-%Y") %></small></span>
+              </div>
+            </div>
+          </div>
+        </div>
+        </div>
+      </div>
     </div>
   </div>
 </div>
