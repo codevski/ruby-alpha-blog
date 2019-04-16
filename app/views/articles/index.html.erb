@@ -1,3 +1,8 @@
 <h1 align='center'>Blog</h1>
-
+<div align="center">
+  <%= will_paginate @clients, list_classes: %w(pagination justify-content-center) %>
+</div>
 <%= render 'article', obj: @articles %>
+<div class='container'>
+  <%= will_paginate @clients, list_classes: %w(pagination justify-content-center) %>
+</div>
