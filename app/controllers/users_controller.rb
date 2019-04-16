@@ -15,7 +15,8 @@ before_action :require_same_user, only: [:edit, :update]
 
     if @user.save
       flash[:success] = "Welcome to the Code Blog #{@user.username}"
-      redirect_to articles_path
+      session[:user_id] = @user.id
+      redirect_to user_path(@user)
     else
       render 'new'
     end
