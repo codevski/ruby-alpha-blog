@@ -68,3 +68,14 @@ footer ul li {
 .line-height-9 {
   line-height: 0.9em;
 }
+
+.form-inline{
+  width: 50%;
+  display: flex;
+  justify-content: center;
+}
+
+.form-inline #search{
+  width: 50%;
+  border-radius: 30px;
+}

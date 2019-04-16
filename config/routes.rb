@@ -12,4 +12,10 @@ Rails.application.routes.draw do
   # post 'users', to: 'users#create'
   # give me all routes expect for new
   resources :users, expect: [:new]
+
+  # Handle account session
+  get 'login', to: 'sessions#new'
+  post 'login', to: 'sessions#create'
+  delete 'logout', to: 'sessions#destroy'
+
 end
